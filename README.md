@@ -92,9 +92,8 @@ graph TD
     J --> K[Update SEO and Featured Image]
     K --> L{Publish or Draft}
     L -->|Publish| M[Notify & Log]
-    L -->|Draft|   M
+    L -->|Draft| M
     M --> N[Error handling & retries]
-
 ```
 
 ## Future Improvements
