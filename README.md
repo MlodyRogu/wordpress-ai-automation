@@ -16,8 +16,14 @@
 ## Screenshots
 Here are some screenshots of the workflow and results:
 
-![Workflow overview](screenshot1.png)
-![Published article in WordPress](screenshot2.png)
+### Workflow overview
+![Workflow](assets/Workflow.jpg)
+
+### Single 80 articles
+![Single 80 Articles](assets/Single-80-articles.jpg)
+
+### Executions workflow
+![Executions](assets/Executions-workflow.jpg)
 
 ## How it works
 1. n8n triggers automation on demand (or schedule).
