@@ -63,6 +63,23 @@ Here are some screenshots of the workflow and results:
    - Log execution data, catch errors, and retry if needed.
    - Notifications can be sent via email/Slack/Telegram.
 
+## Architecture Diagram
+
+```mermaid
+graph TD
+    A[Trigger: Cron / Webhook / Manual] --> B[Load Topic & Validate]
+    B --> C[Outline via OpenAI]
+    C --> D[Generate Sections via OpenAI]
+    D --> E[SEO: title/slug/meta/tags]
+    E --> F[Find/Generate Image]
+    F --> G[Upload Media to WP (/media)]
+    G --> H[Create/Update Post (/posts)]
+    H --> I{Draft or Publish}
+    I -->|Publish| J[Notify & Log]
+    I -->|Draft|  J
+    J --> K[Error handling & retries]
+```
+
 ## Future Improvements
 - 🔍 Add keyword analysis for stronger SEO.
 - 🔗 Automate internal linking between posts.
