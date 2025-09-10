@@ -82,18 +82,19 @@ Here are some screenshots of the workflow and results:
 graph TD
     A[Trigger: Cron / Webhook / Manual] --> B[Load Topic & Targets]
     B --> C[Check existing posts via WP_LIST_ARTICLES]
-    C --> D[Base Outline & Draft (OpenAI/Ollama)]
-    D --> E[Build Variants (up to 80)]
+    C --> D[Base Outline & Draft - OpenAI or Ollama]
+    D --> E[Build Variants - up to 80]
     E --> F[Inject Related Links]
-    F --> G[SEO: title/slug/meta/tags/categories]
-    G --> H[Find/Generate Image]
-    H --> I[Upload Media to WP (/media)]
-    I --> J[Create Posts (/posts)]
-    J --> K[Update SEO & Featured Image]
+    F --> G[SEO: title, slug, meta, tags, categories]
+    G --> H[Find or Generate Image]
+    H --> I[Upload Media to WP /media]
+    I --> J[Create Posts /posts]
+    J --> K[Update SEO and Featured Image]
     K --> L{Publish or Draft}
     L -->|Publish| M[Notify & Log]
     L -->|Draft|   M
     M --> N[Error handling & retries]
+
 ```
 
 ## Future Improvements
